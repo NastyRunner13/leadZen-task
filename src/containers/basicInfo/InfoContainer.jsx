@@ -3,7 +3,7 @@ import Pagination from "../../components/pagination/Pagination";
 import { useState, useEffect } from "react";
 
 const InfoContainer = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [expandedIndex, setExpandedIndex] = useState(-1);
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const dataPerPage = 5;
@@ -28,13 +28,9 @@ const InfoContainer = () => {
     setCurrentPage(page);
   };
 
-  const handleClick = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   return (
     <div className="info section__margin">
-      {currentData.map((item) => (
+      {currentData.map((item, index) => (
         <div className="infocontainer" key={item.id}>
           <div className="infocontainer-upper">
             <span>{item.company.name}</span>
@@ -50,12 +46,42 @@ const InfoContainer = () => {
               <p>CITY</p>
               <span>{item.address.city}</span>
             </div>
-            <button onClick={handleClick}>VIEW DETAILS</button>
+            <button
+              onClick={() =>
+                setExpandedIndex(expandedIndex === index ? -1 : index)
+              }
+            >
+              View Details
+            </button>
           </div>
-          {isExpanded && (
+          {expandedIndex === index && (
             <div className="infocontainer-lower">
-              <div className="lower-description"></div>
-              <div className="lower-otherDetails"></div>
+              <div className="lower-description">
+                <p>CATCH PHRASE</p>
+                <span>{item.company.catchPhrase}</span>
+              </div>
+              <div className="lower-otherDetails">
+                <div className="lower-otherDetails-left">
+                  <p>WEBSITE</p>
+                  <span>{item.website}</span>
+                  <p>USERNAME</p>
+                  <span>{item.username}</span>
+                  <p>EMAIL</p>
+                  <span>{item.email}</span>
+                  <p>PHONE</p>
+                  <span>{item.phone}</span>
+                </div>
+                <div className="lower-otherDetails-right">
+                  <p>ADDRESS</p>
+                  <span>{item.address.suite}</span>
+                  <p>CITY</p>
+                  <span>{item.address.city}</span>
+                  <p>STREET</p>
+                  <span>{item.address.street}</span>
+                  <p>ZIPCODE</p>
+                  <span>{item.address.zipcode}</span>
+                </div>
+              </div>
             </div>
           )}
         </div>

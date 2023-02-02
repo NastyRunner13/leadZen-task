@@ -21,11 +21,11 @@
 }
 
 .pagination button.active {
-  background-color: black;
+  background-color: #415fb9;
   color: #fff;
 }
 
 .pagination button:hover {
   color: #fff;
-  background-color: grey;
+  background-color: rgb(18, 36, 227);
 }

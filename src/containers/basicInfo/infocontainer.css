@@ -3,7 +3,7 @@
   -webkit-box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 1);
   -moz-box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 1);
   box-shadow: 0px 0px 13px 0px rgba(255, 255, 255, 1);
-  font-family: var(--font-base);
+
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -17,8 +17,11 @@
   align-items: center;
 }
 
-.infocontainer span {
+.infocontainer-upper span {
   flex: 1;
+  font-family: var(--font-company);
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .info-details {
@@ -32,13 +35,75 @@
 .info-details p {
   font-weight: 900;
   margin-bottom: 1rem;
+  font-family: var(--font-base);
 }
 
-.infocontainer button {
-  background-color: rgb(78, 73, 73);
+.info-details span {
+  font-family: var(--font-base);
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.infocontainer-upper button {
+  background-color: #00289e;
   border: none;
   outline: none;
   border-radius: 10px;
   padding: 0.5rem 1rem;
   color: white;
+}
+
+.infocontainer-lower {
+  -webkit-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 11px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.lower-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lower-description p {
+  font-family: var(--font-base);
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.lower-description span {
+  font-family: var(--font-base);
+  font-size: 18px;
+  margin-bottom: 1rem;
+}
+
+.lower-otherDetails {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.lower-otherDetails-left,
+.lower-otherDetails-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.lower-otherDetails-left p,
+.lower-otherDetails-right p {
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-base);
+}
+
+.lower-otherDetails-left span,
+.lower-otherDetails-right span {
+  font-family: var(--font-base);
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 1rem;
 }
