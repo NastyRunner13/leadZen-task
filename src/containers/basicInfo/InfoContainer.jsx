@@ -3,6 +3,7 @@ import Pagination from "../../components/pagination/Pagination";
 import { useState, useEffect } from "react";
 
 const InfoContainer = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const dataPerPage = 5;
@@ -27,16 +28,38 @@ const InfoContainer = () => {
     setCurrentPage(page);
   };
 
+  const handleClick = () => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
-    <div className="App">
-      <ul>
-        {currentData.map((item) => (
-          <div key={item.id}>
-            <li>{item.name}</li>
-            <li>{item.username}</li>
+    <div className="info section__margin">
+      {currentData.map((item) => (
+        <div className="infocontainer" key={item.id}>
+          <div className="infocontainer-upper">
+            <span>{item.company.name}</span>
+            <div className="info-details">
+              <p>CONTACT</p>
+              <span>{item.name}</span>
+            </div>
+            <div className="info-details">
+              <p>STREET</p>
+              <span>{item.address.street}</span>
+            </div>
+            <div className="info-details">
+              <p>CITY</p>
+              <span>{item.address.city}</span>
+            </div>
+            <button onClick={handleClick}>VIEW DETAILS</button>
           </div>
-        ))}
-      </ul>
+          {isExpanded && (
+            <div className="infocontainer-lower">
+              <div className="lower-description"></div>
+              <div className="lower-otherDetails"></div>
+            </div>
+          )}
+        </div>
+      ))}
       <Pagination
         dataPerPage={dataPerPage}
         totalData={data.length}

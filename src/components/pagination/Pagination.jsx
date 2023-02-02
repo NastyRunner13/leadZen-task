@@ -12,16 +12,16 @@ const Pagination = ({
   }
 
   return (
-    <div>
-      <ul className="pagination">
-        {pageNumbers.map((number) => (
-          <li key={number} className={number === currentPage ? "active" : ""}>
-            <a onClick={() => handlePageChange(number)} href="#">
-              {number}
-            </a>
-          </li>
-        ))}
-      </ul>
+    <div className="pagination">
+      {pageNumbers.map((number) => (
+        <button
+          key={number}
+          className={number === currentPage ? "active" : ""}
+          onClick={() => handlePageChange(number)}
+        >
+          {number}
+        </button>
+      ))}
     </div>
   );
 };
