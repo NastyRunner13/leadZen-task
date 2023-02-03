@@ -20,4 +20,8 @@
 ![Screenshot (63)](https://user-images.githubusercontent.com/102866310/216416903-1e73c400-388f-4624-9db7-b92b4d8b3714.png)
 
 <br>
+<h3> Responsive on all kinds of devices
+
+![Screenshot (64)](https://user-images.githubusercontent.com/102866310/216579191-c9a5657f-6226-4feb-b194-8d4ab8d9e840.png)
+
 <h1>Thank you!</h1>
