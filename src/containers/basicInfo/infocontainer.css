@@ -30,6 +30,7 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
+  margin: 0.5rem;
 }
 
 .info-details p {
@@ -106,4 +107,95 @@
   font-weight: 400;
   font-size: 18px;
   margin-bottom: 1rem;
+}
+@media screen and (max-width: 900px) {
+  .infocontainer {
+    padding: 2rem;
+  }
+  .infocontainer-upper span {
+    font-size: 18px;
+  }
+  .info-details p,
+  .lower-description p,
+  .lower-otherDetails-left p,
+  .lower-otherDetails-right p {
+    font-size: 14px;
+  }
+  .info-details span,
+  .lower-description span,
+  .lower-otherDetails-left span,
+  .lower-otherDetails-right span {
+    font-size: 16px;
+  }
+  .infocontainer-upper button {
+    padding: 0.5rem;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .infocontainer-upper span {
+    font-size: 16px;
+  }
+  .info-details p,
+  .lower-description p,
+  .lower-otherDetails-left p,
+  .lower-otherDetails-right p {
+    font-size: 12px;
+  }
+  .info-details span,
+  .lower-description span,
+  .lower-otherDetails-left span,
+  .lower-otherDetails-right span {
+    font-size: 14px;
+  }
+  .infocontainer-upper button {
+    padding: 0.5rem;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .infocontainer-upper {
+    flex-direction: column;
+  }
+  .infocontainer-upper span {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+  }
+  .infocontainer {
+    padding: 1rem;
+  }
+  .info-details {
+    width: 100%;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .info-details p {
+    flex: 1;
+    margin-bottom: 0.5rem;
+    font-size: 12px;
+  }
+  .info-details span {
+    flex: 1;
+    font-size: 14px;
+  }
+  .lower-description p,
+  .lower-otherDetails-left p,
+  .lower-otherDetails-right p {
+    font-size: 12px;
+  }
+  .lower-description span,
+  .lower-otherDetails-left span,
+  .lower-otherDetails-right span {
+    font-size: 14px;
+  }
+  .infocontainer-upper button {
+    padding: 0.5rem;
+    font-size: 11px;
+    margin-top: 0.5rem;
+  }
 }
