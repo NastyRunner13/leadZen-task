@@ -1,4 +1,4 @@
-# leadZen-task
+# leadzen-task
 <h2>This project is the part of the task-round for the Leadzen Company</h2>
 <h2>What was the task?</h2>
 <p>To display infornmation fetching from the given endpoint and achieve the desired results.<p>
